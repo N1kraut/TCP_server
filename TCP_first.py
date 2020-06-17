@@ -23,3 +23,9 @@ class socket:  # Да, да, имя класса с маленькой букв�
 
 
 print(serv_sock.fileno())  # 3 или другой int
+
+while True:
+    data = client_sock.recv(1024)
+    if not data:
+        break
+    client_sock.sendall(data)
