@@ -20,3 +20,6 @@ class socket:  # Да, да, имя класса с маленькой букв�
 
       def fileno():
           return self._fd
+
+
+print(serv_sock.fileno())  # 3 или другой int
