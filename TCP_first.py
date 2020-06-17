@@ -29,3 +29,11 @@ while True:
     if not data:
         break
     client_sock.sendall(data)
+
+serv_sock:
+  laddr (ip=<server_ip>, port=53210)
+  raddr (ip=0.0.0.0, port=*)  # т.е. любой
+
+client_sock:
+  laddr (ip=<client_ip>, port=51573)  # случайный порт, назначенный системой
+  raddr (ip=<server_ip>, port=53210)  # адрес слушающего сокета на сервере
